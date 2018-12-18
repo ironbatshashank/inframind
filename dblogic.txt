@@ -1,0 +1,7 @@
+after 12th b-tech
+	course name:
+	category: 
+	author:
+	update-date:
+	content:
+	views:
