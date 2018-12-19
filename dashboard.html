@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/set-1.css" />
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <title>DYP DashBoard</title>
+      <link rel="stylesheet" href="css/bulma.css" />
+      <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <style media="screen">
+      textarea{
+
+      }
+    </style>
+</head>
+<body>
+
+<div class="columns">
+  <div class="column">
+    <form class="form" action="index.html" method="post">
+      <div class="panel is-primary">
+        <div class="panel-heading has-text-centered hero is-primary" style="display: inline-block;width:100%; font-size:16px;font-weight:600;padding:20px 10px;">
+          <button id="bold" class="button" type="button"> <i class="icon-thumbs-up"></i></button>
+          <button id="heading" class="button" type="button"> <i class="icon-thumbs-up"></i></button>
+
+        </div>
+        <div class="form-field">
+          <textarea class="panel-block" id="textarea" name="name" rows="20"style="width:100%" ></textarea>
+        </div>
+      </div>
+    <div class="form-field" style="padding-left: 50px">
+        <button class="button is-success is-medium" id="btn1" onclick="showResult()" type="button" name="button">Check</button>
+    </div>
+    </form>
+  </div>
+  <div class="column">
+    <div class="panel-heading" style="font-size:16px;font-weight:600;padding:20px 10px;">
+      Result
+    </div>
+    <p id="result">
+    </p>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("#result").html($("#textarea").val());
+    });
+
+    $("#bold").click(function(){
+      var txt1 = $("#textarea").val();
+      var txt2 = "<b> some text here </b>";
+      var txt3 = txt1 +txt2;
+        $("#textarea").val(txt3);
+    });
+
+    $("#heading").click(function(){
+      var txt1 = $("#textarea").val();
+      var txt2 = "<h1 class=\"title is-3\"> this is heading </h1>";
+      var txt3 = txt1 +txt2;
+        $("#textarea").val(txt3);
+    });
+});
+</script>
+</body>
+</html>
