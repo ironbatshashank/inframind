@@ -24,158 +24,233 @@
       </div>
     </nav>
     <br><br><br>
-    <div class="container" style="width:300px;">
+    <div class="columns">
+      <div class="column">
+        sdf
+      </div>
+      <div class="column">
+        <div class="help is-success" id="selected">
+
+          Selected: <br>
+          instance type : t2.micro <br>
+          Machine Image : Windows Machine Image <br>
+          vCPU : 1 <br>
+          RAM : 1 GB <br>
+          Storage : 10GB <br>
+        </div>
+
+        <br>
+
+        <form class="" action="https://v8z70enoz5.execute-api.us-east-1.amazonaws.com/Dev/new-instance" method="get">
+          <input type="hidden" id="instance" name="inst" value="t2micro">
+          <div class="control">
+            <label class="label">Select OS</label>
+            <div class="select">
+              <select name="AMI" id="AMI">
+                <option value="ami-041114ddee4a98333">Windows Machine Image</option>
+                <option value="ami-0080e4c5bc078760e">Linux Machine Image</option>
+              </select>
+            </div>
+          </div><br>
+          <div class="control">
+            <label class="label">Select No of virtual CPUs</label>
+            <div class="select">
+              <select name="vCPU" id="vCPU" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <div class="control">
+            <label class="label">Select RAM</label>
+            <div class="select">
+              <select name="RAM" id="RAM">
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+              <p class="help is-info">size in GB</p>
+            </div>
+          </div>
+          <br>
+
+          <div class="field">
+
+            <div class="control has-icons-right">
+              <label class="label">Select Storage</label>
+              <input class="input" type="text" name="storage" id="storage" value="10" placeholder="Example : 10GB">
+
+              <span class="icon is-small is-right">
+                <i> GB</i>
+              </span>
+              <p class="help is-info">must be atleast 8 GB</p>
+            </div>
+          </div>
+          <br>
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-primary">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-text">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="column">
+        <div class="help is-success" id="selected">
+
+          Selected: <br>
+          instance type : t2.micro <br>
+          Machine Image : Windows Machine Image <br>
+          vCPU : 1 <br>
+          RAM : 1 GB <br>
+          Storage : 10GB <br>
+        </div>
+
+    <br>
+
+          <form class="" action="https://v8z70enoz5.execute-api.us-east-1.amazonaws.com/Dev/new-instance" method="get">
+            <input type="hidden" id="instance" name="inst" value="t2micro">
+            <div class="control">
+               <label class="label">Select OS</label>
+              <div class="select">
+                <select name="AMI" id="AMI">
+                  <option value="ami-041114ddee4a98333">Windows Machine Image</option>
+                  <option value="ami-0080e4c5bc078760e">Linux Machine Image</option>
+                </select>
+              </div>
+            </div><br>
+            <div class="control">
+               <label class="label">Select No of virtual CPUs</label>
+              <div class="select">
+                <select name="vCPU" id="vCPU" >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+            </div>
+    <br>
+            <div class="control">
+               <label class="label">Select RAM</label>
+              <div class="select">
+                <select name="RAM" id="RAM">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+                <p class="help is-info">size in GB</p>
+              </div>
+            </div>
+    <br>
+
+      <div class="field">
+
+            <div class="control has-icons-right">
+                <label class="label">Select Storage</label>
+              <input class="input" type="text" name="storage" id="storage" value="10" placeholder="Example : 10GB">
+
+              <span class="icon is-small is-right">
+                <i> GB</i>
+              </span>
+                <p class="help is-info">must be atleast 8 GB</p>
+            </div>
+      </div>
 
 
-    <div class="help is-success" id="selected">
 
-      Selected: <br>
-      instance type : t2.micro <br>
-      Machine Image : Windows Machine Image <br>
-      vCPU : 1 <br>
-      RAM : 1 GB <br>
-      Storage : 10GB <br>
+
+          <br>
+          <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-primary">Submit</button>
+      </div>
+      <div class="control">
+        <button class="button is-text">Cancel</button>
+      </div>
+    </div>
+          </form>
+      </div>
+
+
     </div>
 
-<br>
-
-      <form class="" action="https://v8z70enoz5.execute-api.us-east-1.amazonaws.com/Dev/new-instance" method="get">
-        <input type="hidden" id="instance" name="inst" value="t2micro">
-        <div class="control">
-           <label class="label">Select OS</label>
-          <div class="select">
-            <select name="AMI" id="AMI">
-              <option value="ami-041114ddee4a98333">Windows Machine Image</option>
-              <option value="ami-0080e4c5bc078760e">Linux Machine Image</option>
-            </select>
-          </div>
-        </div><br>
-        <div class="control">
-           <label class="label">Select No of virtual CPUs</label>
-          <div class="select">
-            <select name="vCPU" id="vCPU" >
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-        </div>
-<br>
-        <div class="control">
-           <label class="label">Select RAM</label>
-          <div class="select">
-            <select name="RAM" id="RAM">
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-            <p class="help is-info">size in GB</p>
-          </div>
-        </div>
-<br>
-
-  <div class="field">
-
-        <div class="control has-icons-right">
-            <label class="label">Select Storage</label>
-          <input class="input" type="text" name="storage" id="storage" value="10" placeholder="Example : 10GB">
-
-          <span class="icon is-small is-right">
-            <i> GB</i>
-          </span>
-            <p class="help is-info">must be atleast 8 GB</p>
-        </div>
-  </div>
-
-
-
-
-      <br>
-      <div class="field is-grouped">
-  <div class="control">
-    <button class="button is-primary">Submit</button>
-  </div>
-  <div class="control">
-    <button class="button is-text">Cancel</button>
-  </div>
-</div>
-      </form>
-    </div>
-
 
 
 
   </div>
 
-<script type="text/javascript">
-$(document).ready(function()
-{
+  <script type="text/javascript">
+  $(document).ready(function()
+  {
 
 
     $("#AMI,#vCPU,#RAM,#storage").change(function()
     {
-        var ami=$("#AMI").val();
-        var vcpu=$("#vCPU").val();
-        var ram=$("#RAM").val();
-        var storage=$("#storage").val();
+      var ami=$("#AMI").val();
+      var vcpu=$("#vCPU").val();
+      var ram=$("#RAM").val();
+      var storage=$("#storage").val();
 
-        if(vcpu == 1)
-        {
-            if(ram == 1)
-              var instance = "t2.micro";
-            else if (ram == 2)
-              var instance = "t2.small";
-        }
-        if(vcpu == 2)
-        {
-            if(ram == 4)
-              var instance = "t2.medium";
-            else if (ram == 8)
-              var instance = "t.2large";
-        }
-        if(vcpu == 4)
-        {
-          if(ram == 16)
-            var instance = "t2.xlarge";
-        }
+      if(vcpu == 1)
+      {
+        if(ram == 1)
+        var instance = "t2.micro";
+        else if (ram == 2)
+        var instance = "t2.small";
+      }
+      if(vcpu == 2)
+      {
+        if(ram == 4)
+        var instance = "t2.medium";
+        else if (ram == 8)
+        var instance = "t.2large";
+      }
+      if(vcpu == 4)
+      {
+        if(ram == 16)
+        var instance = "t2.xlarge";
+      }
 
-        $("#instance").val = ' '+ instance;
+      $("#instance").val = ' '+ instance;
 
-        $("#instance").val(instance);
+      $("#instance").val(instance);
 
-        var dataString = 'Selected: <br> instance type : '+ instance + '<br>';
-        dataString = dataString + 'Machine Image : '+ ami + '<br>';
-        dataString = dataString + 'vCPU : ' + vcpu + '<br>' ;
-        dataString = dataString + 'RAM : ' + ram + ' GB ' + '<br>';
-        dataString = dataString + 'Storage : ' + storage + '<br>';
-        $('#selected').html(dataString);
+      var dataString = 'Selected: <br> instance type : '+ instance + '<br>';
+      dataString = dataString + 'Machine Image : '+ ami + '<br>';
+      dataString = dataString + 'vCPU : ' + vcpu + '<br>' ;
+      dataString = dataString + 'RAM : ' + ram + ' GB ' + '<br>';
+      dataString = dataString + 'Storage : ' + storage + '<br>';
+      $('#selected').html(dataString);
     });
-});
+  });
 </script>
 <script type="text/javascript">
 
 $("#vCPU").change(function()
 {   var vcpu=$("#vCPU").val();
-    // dataString = dataString + 'vCPU : ' + vcpu + '<br>' ;
-    if(vcpu == 1){
-        addAllRAM();
-        $("#RAM option[value='4']").remove();
-        $("#RAM option[value='8']").remove();
-        $("#RAM option[value='16']").remove();
-    }
-    if(vcpu == 2){
-        addAllRAM();
-        $("#RAM option[value='1']").remove();
-        $("#RAM option[value='2']").remove();
-        $("#RAM option[value='16']").remove();
-    }
+// dataString = dataString + 'vCPU : ' + vcpu + '<br>' ;
+if(vcpu == 1){
+  addAllRAM();
+  $("#RAM option[value='4']").remove();
+  $("#RAM option[value='8']").remove();
+  $("#RAM option[value='16']").remove();
+}
+if(vcpu == 2){
+  addAllRAM();
+  $("#RAM option[value='1']").remove();
+  $("#RAM option[value='2']").remove();
+  $("#RAM option[value='16']").remove();
+}
 
-    if(vcpu == 4){
-        addAllRAM();
-        $("#RAM option[value='1']").remove();
-        $("#RAM option[value='2']").remove();
-        $("#RAM option[value='4']").remove();
-        $("#RAM option[value='8']").remove();
-    }
+if(vcpu == 4){
+  addAllRAM();
+  $("#RAM option[value='1']").remove();
+  $("#RAM option[value='2']").remove();
+  $("#RAM option[value='4']").remove();
+  $("#RAM option[value='8']").remove();
+}
 });
 
 function addAllRAM(){
