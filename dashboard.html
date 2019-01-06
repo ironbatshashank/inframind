@@ -9,7 +9,36 @@
   <link rel="stylesheet" href="css/master.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+      var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
 
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+    };
+    $(document).ready(function()
+    {
+        var name = getUrlParameter('name');
+        var email = getUrlParameter('email');
+        var phone = getUrlParameter('phone');
+        $('#putName').html(name);
+        $('#putEmail').html(email);
+        $('#putPhone').html(phone);
+
+
+    });
+
+
+
+  </script>
 
 </head>
 <body>
@@ -24,11 +53,24 @@
       </div>
     </nav>
     <br><br><br>
-    <div class="columns">
-      <div class="column">
-        sdf
+    <div class="columns " style="width:1000px;position:relative;margin:0 auto;">
+      <div class="column is-centered">
+        <div class="hero is-dark" style="">
+          <div class="hero-body">
+              <h1 class="title is-4">Name</h1>
+                 <h1 class="subtitle" id="putName"></h1><br><br>
+              <h1 class="title is-4" >Email ID:</h1>
+              <h1 class="subtitle" id="putEmail"></h1><br><br>
+              <h1 class="title is-4" id="putPhone">Phone No.:</h1>
+              <h1 class="subtitle" id="putEmail"></h1>
+          </div>
+      </b>
+<br>
+<br>
+<br><br><br><br>
+<br>        </div>
       </div>
-      <div class="column">
+      <div class="column is-centered">
         <div class="help is-success" id="selected">
 
           Selected: <br>
@@ -98,7 +140,7 @@
           </div>
         </form>
       </div>
-      <div class="column">
+      <div class="column is-centered">
         <div class="help is-success" id="selected">
 
           Selected: <br>
