@@ -44,7 +44,7 @@
 <body>
   <div class="wrapper" >
     <nav class="navbar is-dark  is-fixed-top" >
-      <div class="navbar-brand">
+      <div class="navbar-brand" >
         <h1>
           TechnoCratic Info Solutions
         </h1>
@@ -130,14 +130,14 @@
             </div>
           </div>
           <br>
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-primary">Submit</button>
-            </div>
-            <div class="control">
-              <button class="button is-text">Cancel</button>
-            </div>
-          </div>
+	<div>
+    <label class="label" for="pass">Password</label><br>
+    <input type="password" id="pass" name="password"
+           minlength="8" required>
+<p class="help is-info">atleast 8 characters</p>
+</div>
+<br>
+
         </form>
       </div>
       <div class="column is-centered">
@@ -199,42 +199,32 @@
                 <p class="help is-info">must be atleast 8 GB</p>
             </div>
       </div>
-
-
-
-
           <br>
-          <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-primary">Submit</button>
-      </div>
-      <div class="control">
-        <button class="button is-text">Cancel</button>
+	</form>
       </div>
     </div>
-          </form>
-      </div>
 
 
-    </div>
-
-
-
+	  <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-primary">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-text">Cancel</button>
+            </div>
+          </div>
 
   </div>
 
   <script type="text/javascript">
   $(document).ready(function()
   {
-
-
     $("#AMI,#vCPU,#RAM,#storage").change(function()
     {
       var ami=$("#AMI").val();
       var vcpu=$("#vCPU").val();
       var ram=$("#RAM").val();
       var storage=$("#storage").val();
-
       if(vcpu == 1)
       {
         if(ram == 1)
@@ -254,11 +244,8 @@
         if(ram == 16)
         var instance = "t2.xlarge";
       }
-
       $("#instance").val = ' '+ instance;
-
       $("#instance").val(instance);
-
       var dataString = 'Selected: <br> instance type : '+ instance + '<br>';
       dataString = dataString + 'Machine Image : '+ ami + '<br>';
       dataString = dataString + 'vCPU : ' + vcpu + '<br>' ;
@@ -269,7 +256,6 @@
   });
 </script>
 <script type="text/javascript">
-
 $("#vCPU").change(function()
 {   var vcpu=$("#vCPU").val();
 // dataString = dataString + 'vCPU : ' + vcpu + '<br>' ;
@@ -285,7 +271,6 @@ if(vcpu == 2){
   $("#RAM option[value='2']").remove();
   $("#RAM option[value='16']").remove();
 }
-
 if(vcpu == 4){
   addAllRAM();
   $("#RAM option[value='1']").remove();
@@ -294,7 +279,6 @@ if(vcpu == 4){
   $("#RAM option[value='8']").remove();
 }
 });
-
 function addAllRAM(){
   $("#RAM").empty();
   $("#RAM").append('<option value="1">1</option>');
